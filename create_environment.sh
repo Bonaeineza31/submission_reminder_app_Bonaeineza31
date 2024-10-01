@@ -79,3 +79,5 @@ Duhoze Benoite, Shell Navigation, not submitted
 EOL
 
 echo "Submission  with new records!"
+
+chmod +x submission_reminder_app/startup.sh
