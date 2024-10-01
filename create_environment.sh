@@ -56,6 +56,19 @@ function check_submissions {
     done < <(tail -n +2 "$submissions_file") # Skip the header
 }' > submission_reminder_app/modules/functions.sh
 
+echo '#!/bin/bash
+
+# Step 1: Make sure we are in the correct directory
+cd "$(dirname "$0")"
+
+# Step 2: Start the reminder app
+echo "Starting the Reminder App..."
+
+# Execute the reminder script
+bash ./app/reminder.sh
+
+echo "Reminder App has been executed successfully!"' > submission_reminder_app/startup.sh
+
 cat <<EOL >> submission_reminder_app/assets/submissions.txt
 Student Name, Assignment, Status
 Gitangaza Bernyce, Shell Navigation, not submitted
