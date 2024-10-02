@@ -9,6 +9,7 @@ submissions_file="./assets/submissions.txt"
 
 # Print remaining time and run the reminder function
 echo "Assignment: $ASSIGNMENT"
+                                                      
 echo "Days remaining to submit: $DAYS_REMAINING days"
 echo "--------------------------------------------"
 
