@@ -46,7 +46,7 @@ function check_submissions {
         if [[ "$assignment" == "$ASSIGNMENT" && "$status" == "not submitted" ]]; then
             echo "Reminder: $student has not submitted the $ASSIGNMENT assignment!"
         fi
-    done < <(tail -n +2 "$submissions_file") # Skip the header
+    done < <(tail -n +2 "$submissions_file") 
 }' > submission_reminder_app/modules/functions.sh
 
 echo '#!/bin/bash
