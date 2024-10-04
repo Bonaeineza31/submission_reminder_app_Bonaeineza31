@@ -11,7 +11,6 @@ function check_submissions {
         assignment=$(echo "$assignment" | xargs)
         status=$(echo "$status" | xargs)
 
-        # Check if the assignment is not submitted and if the student has already been reminded
         if [[ "$assignment" == "$ASSIGNMENT" && "$status" == "not submitted" ]]; then
             if [[ -z "${reminded_students[$student]}" ]]; then  # Check if not reminded
                 echo "Reminder: $student has not submitted the $ASSIGNMENT assignment!"
