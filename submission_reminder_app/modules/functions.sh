@@ -3,7 +3,7 @@
 function check_submissions {
     local submissions_file=$1
     echo "Checking submissions in $submissions_file"
-    
+
     declare -A reminded_students  # Create an associative array
 
     while IFS=, read -r student assignment status; do
